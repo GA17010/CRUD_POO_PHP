@@ -1,0 +1,264 @@
+/* Estilos por defecto (modo claro) */
+:root {
+    --fondo: #f2f3f3;
+    --texto: #000000;
+    --fondoMain: #ffffff;
+    --box-shadow: #080808;
+    --fondoNavbar: #ffffff;
+    --table-text: #000000;
+    --table-bg: #ffffff;
+    --table-bg-td: #f2f3f3;
+}
+
+body,html{
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    --fondo: #333333;
+    --texto: #f0e5e5;
+    --fondoMain: #1f1c1c;
+    --box-shadow: #979191;
+    --fondoNavbar: #464040;
+    --table-text: #f0e5e5;
+    --table-bg: #464040;
+    --table-bg-td: #665d5d;
+}
+/* Usar dark-mode segun la preferencia del navegador */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--fondo);
+        color: var(--texto);
+    }
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: auto;
+    color: var(--texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > .login > .has-text-centered,
+.main-container > .login > .field > label{
+    color: var(--texto);
+}
+
+/* Login Dark */
+.main-container > .login > .field > .control > .input{
+    background-color: var(--fondoMain);
+    color: var(--texto);
+    border-radius: 10px;
+}
+
+.main-container > .login,
+.main-container > .hero-body{
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 280px;
+}
+
+.main-container > .login {
+    background-color: var(--fondoMain);
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px 2px var(--box-shadow);
+}
+
+.main-container > .login > .has-text-centered > .button{
+    border-radius: 20px;
+    color: var(--texto);
+    margin-top: 10px;
+    box-shadow: 0px 0px 2px 0px var(--box-shadow);
+}
+
+/* Dashboard Dark*/
+.container > .title,
+.container > .subtitle,
+.container > .columns > .subtitle {
+    color: var(--texto);
+}
+
+/* NewUser-view Dark */
+.container > .FormularioAjax > .columns > .column > .control > .input,
+.container > .FormularioAjax > .columns > .column > .file > .file-label > .file-cta {
+    background-color: var(--fondoMain);
+    color: var(--texto);
+    border-radius: 10px;
+}
+
+/* 404 Dark */
+.main-container > .hero-body > .hero-body > .title,
+.main-container > .hero-body > .hero-body > .subtitle{
+    color: var(--texto);
+}
+
+/* userUpdate */
+.container > .column > .title ,
+.container > .column > .subtitle{
+    color: var(--texto);
+}
+
+.resaltado{
+    color: var(--texto);
+}
+
+/* userUpdate Dark */
+.containerUpdate {
+    background-color: var(--fondo);
+}
+
+/* boton Atras mobile */
+.btn_mobile{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 10px;
+}
+
+
+/* Toggle de aspecto */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+    /* border de 1px y suave */
+    border: 1px groove gray;
+    border-style: solid;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3.6px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.slider-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    left: 71%;
+    bottom: 9.5px;
+    transform: translateX(-50%);
+    transition: all 0.5s ease-in-out;
+}
+
+input:checked + .slider {
+    background-color: #020405;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* cambiar de posicion el icono */
+input:checked + .slider + .slider-icon {
+    left: 25%;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Navbar modo Dark */
+.navbar {
+    box-shadow: 0px 0px 5px 1px var(--box-shadow);
+    background-color: var(--fondoNavbar);
+}
+
+/* navbar-menu cuando tenga la clase is-active */
+.navbar-menu.is-active {
+    background-color: var(--fondoNavbar);
+}
+
+/* checkbox */
+.checkbox {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 26px;
+    margin-inline: 5px;
+    margin-inline-end: 10px;
+    /* checkbox mas grande */
+    transform: scale(1.3);
+}
+
+.table {
+    background-color: var(--table-bg);
+    color: var(--table-text);
+    overflow-x: auto;
+}
+
+.table > thead > tr > th{
+    background-color: var(--table-bg);
+    color: var(--table-text);
+}
+
+.table > tbody > tr > td{
+    background-color: var(--table-bg-td);
+    color: var(--table-text);
+}
+
+.navbar-item, .navbar-link, .navbar-dropdown{
+    color: var(--texto);
+}
+
+.navbar-link {
+    /* agregar borde top y bottom */
+    border-top: 1px groove var(--texto);
+    border-bottom: 1px groove var(--texto);
+}
+
+.container {
+    background-color: var(--fondo);
+
+}
